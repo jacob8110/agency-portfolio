@@ -330,12 +330,10 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 w-full backdrop-blur-md border-b border-white/5 bg-black/40">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3">
-            <img src={logoImg} alt="ITAgency" className="h-8 w-auto object-contain" />
-            <span className="text-xl font-bold tracking-tight text-white">
-              IT<span className="text-blue-500">agency</span>
-            </span>
-          </a>
+          <a href="#" className="flex items-center gap-2">
+  <img src={logoImg} alt="ITAgency" className="h-8 w-auto object-contain" />
+</a>
+
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
             <a href="#hero" className="hover:text-blue-400 transition-colors">Home</a>
