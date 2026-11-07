@@ -466,115 +466,218 @@ function Index() {
         </div>
       </section>
 
-      {/* Featured Projects with Sticky Stacking Cards */}
-      <section id="projects" className="relative z-10 py-32 px-6 max-w-7xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-24">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-mono uppercase tracking-widest mb-4">
-            Selected Works
-          </div>
-          <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
-            Featured Projects
-          </h2>
-          <p className="text-white/60 text-base sm:text-lg">
-            A showcase of production-ready architectures, full-stack ecosystems, and polished interactive experiences.
-          </p>
-        </div>
+      {/* ========================================================= */}
+{/* FEATURED PROJECTS — STACKED DECK WITH REAL PRODUCTION UI  */}
+{/* ========================================================= */}
+<section id="portfolio" className="relative z-10 px-5 py-24 max-w-[1320px] mx-auto">
+  {/* Section Header */}
+  <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+    <div>
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-ping" />
+        Selected Work
+      </div>
+      <h2 className="text-3xl lg:text-5xl font-bold font-display tracking-tight text-white">
+        Crafting Digital Experiences
+      </h2>
+      <p className="mt-3 text-slate-400 text-base max-w-xl">
+        A showcase of concept designs for fictional products, built to demonstrate layout, visual direction, and UI craft. Not client work.
+      </p>
+    </div>
+    <a
+      href="https://github.com/jacob8110"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors group"
+    >
+      View All Repositories on GitHub
+      <span className="transform transition-transform group-hover:translate-x-1">→</span>
+    </a>
+  </div>
 
-        <div className="flex flex-col gap-12">
-          {FEATURED_PROJECTS.map((project, idx) => (
-            <div
-              key={project.id}
-              className="sticky top-28 rounded-3xl p-8 sm:p-12 border border-white/10 backdrop-blur-xl shadow-2xl transition-all"
-              style={{
-                backgroundColor: theme === 'black' ? '#080808' : '#0c1424',
-                marginTop: `${idx * 16}px`,
-              }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-6 flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-xs font-mono text-blue-400 uppercase tracking-widest">
-                        {project.category}
-                      </span>
-                      <span className="text-xs font-mono text-white/40">
-                        {project.id} / 03
-                      </span>
-                    </div>
-
-                    <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 leading-snug">
-                      {project.title}
-                    </h3>
-
-                    <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-6">
-                      {project.desc}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 rounded-md text-xs font-mono bg-white/5 border border-white/10 text-white/80"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-4 pt-6 border-t border-white/10 mb-8">
-                    {project.stats.map((stat, i) => (
-                      <div key={i}>
-                        <div className="text-[11px] font-mono text-white/40 uppercase tracking-wider">{stat.label}</div>
-                        <div className="text-base font-bold text-white mt-1">{stat.val}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-mono bg-white/5 hover:bg-white/10 border border-white/10 text-white transition-all"
-                    >
-                      <Github className="w-4 h-4" />
-                      View Source
-                    </a>
-                    <a
-                      href="#contact"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-mono bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-lg shadow-blue-600/30"
-                    >
-                      Project Case Study
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
+  {/* Stacked Cards Container */}
+  <div className="relative flex flex-col gap-10 pb-20">
+    {[
+      {
+        id: "01",
+        stickyTop: "top-24",
+        zIndex: "z-10",
+        badge: "Luxury E-Commerce - Concept",
+        badgeColor: "bg-amber-500/10 border-amber-500/20 text-amber-400",
+        title: "ATELIER 09 - Luxury Fashion Storefront",
+        desc: "A concept homepage for a fictional luxury fashion store, with an editorial layout, a full-width hero, and a featured product grid.",
+        url: "preview.concept",
+        image: "/projects/concept-atelier09.jpg",
+        floatingBadge: "Concept design preview",
+        features: ["Editorial hero layout", "Featured product grid", "Minimal category navigation"],
+        stack: ["UI Concept", "Responsive Layout", "Product Grid"],
+        liveUrl: "https://github.com/jacob8110",
+      },
+      {
+        id: "02",
+        stickyTop: "top-32",
+        zIndex: "z-20",
+        badge: "Creative Studio - Concept",
+        badgeColor: "bg-purple-500/10 border-purple-500/20 text-purple-400",
+        title: "ORBITAL - Creative Studio Website",
+        desc: "A concept site for a fictional creative studio, with a dark background, glowing gradient visuals, and a showcase of selected work.",
+        url: "preview.concept",
+        image: "/projects/concept-orbital.jpg",
+        floatingBadge: "Concept design preview",
+        features: ["Dark gradient hero", "Featured work grid", "Services and case study layout"],
+        stack: ["UI Concept", "Responsive Layout", "Motion Accents"],
+        liveUrl: "https://github.com/jacob8110",
+      },
+      {
+        id: "03",
+        stickyTop: "top-40",
+        zIndex: "z-30",
+        badge: "Cybersecurity Platform - Concept",
+        badgeColor: "bg-emerald-500/10 border-emerald-500/20 text-emerald-400",
+        title: "SENTRA - Threat Detection Platform",
+        desc: "A concept landing page for a fictional cybersecurity platform, with a dark hexagon-grid hero and a live system status panel.",
+        url: "preview.concept",
+        image: "/projects/concept-sentra.jpg",
+        floatingBadge: "Concept design preview",
+        features: ["Live system status panel", "Threat event log", "Feature highlight grid"],
+        stack: ["UI Concept", "Responsive Layout", "Dashboard Styling"],
+        liveUrl: "https://github.com/jacob8110",
+      },
+      {
+        id: "04",
+        stickyTop: "top-48",
+        zIndex: "z-40",
+        badge: "AI Workspace - Concept",
+        badgeColor: "bg-blue-500/10 border-blue-500/20 text-blue-400",
+        title: "LUMA - AI Workspace Concept",
+        desc: "A concept interface for a fictional AI workspace, with a centered prompt box, suggestion chips, and a history sidebar.",
+        url: "preview.concept",
+        image: "/projects/concept-luma.jpg",
+        floatingBadge: "Concept design preview",
+        features: ["Central prompt composer", "Suggestion chips", "History sidebar"],
+        stack: ["UI Concept", "Responsive Layout", "Dark Theme"],
+        liveUrl: "https://github.com/jacob8110",
+      },
+    ].map((project) => (
+      <div
+        key={project.id}
+        className={`sticky ${project.stickyTop} ${project.zIndex} transition-all duration-300`}
+      >
+        <div className="rounded-2xl bg-slate-900/95 backdrop-blur-xl border border-white/10 border-t-white/20 p-6 md:p-8 lg:p-10 shadow-[0_-12px_32px_rgba(0,0,0,0.6)] hover:border-white/20 transition-all">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Left Column: Editorial Details */}
+            <div className="lg:col-span-5 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-xs font-mono font-bold text-slate-500 tracking-wider">
+                    {project.id} //
+                  </span>
+                  <span className={`px-2.5 py-0.5 rounded-full text-xs font-medium border ${project.badgeColor}`}>
+                    {project.badge}
+                  </span>
                 </div>
 
-                <div className="lg:col-span-6">
-                  <div className="rounded-2xl border border-white/10 overflow-hidden bg-black/60 shadow-inner">
-                    <div className="px-4 py-3 bg-white/[0.04] border-b border-white/10 flex items-center justify-between">
-                      <div className="flex items-center gap-1.5">
-                        <span className="w-3 h-3 rounded-full bg-red-500/80" />
-                        <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                        <span className="w-3 h-3 rounded-full bg-emerald-500/80" />
-                      </div>
-                      <div className="text-[11px] font-mono text-white/40 truncate max-w-[200px]">
-                        https://github.com/jacob8110/{project.id}
-                      </div>
-                      <div className="w-4" />
-                    </div>
+                <h3 className="text-2xl md:text-3xl font-bold font-display text-white tracking-tight mb-3">
+                  {project.title}
+                </h3>
 
-                    <div className="h-[280px] sm:h-[320px] bg-gradient-to-br from-blue-600/20 via-slate-900/60 to-black relative">
-                      {project.previewElements}
+                <p className="text-slate-400 text-sm md:text-base leading-relaxed mb-6">
+                  {project.desc}
+                </p>
+
+                {/* Core Features */}
+                <div className="space-y-2 mb-6">
+                  {project.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2.5 text-xs md:text-sm text-slate-300">
+                      <div className="w-4 h-4 rounded-full bg-blue-500/20 border border-blue-500/40 text-blue-400 flex items-center justify-center text-[10px] font-bold">
+                        ✓
+                      </div>
+                      <span>{feature}</span>
                     </div>
-                  </div>
+                  ))}
+                </div>
+
+                {/* Tech Stack Pills */}
+                <div className="flex flex-wrap gap-1.5 mb-8">
+                  {project.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300 text-xs font-mono"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
+
+              {/* Action Buttons */}
+              <div className="flex items-center gap-4 pt-4 border-t border-white/10">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs md:text-sm transition-all shadow-lg shadow-blue-600/25 flex items-center gap-2"
+                >
+                  <span>Explore Case Study</span>
+                  <span>↗</span>
+                </a>
+                <a
+                  href="https://github.com/jacob8110"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 text-slate-300 font-medium text-xs md:text-sm transition-all"
+                >
+                  View Code
+                </a>
+              </div>
             </div>
-          ))}
+
+            {/* Right Column: Realistic Browser Mockup */}
+            <div className="lg:col-span-7">
+              <div className="relative rounded-xl overflow-hidden bg-slate-950 border border-white/15 shadow-2xl group">
+                
+                {/* Browser Titlebar */}
+                <div className="flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-white/10 text-xs">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
+                  </div>
+                  <div className="px-4 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-400 flex items-center gap-1.5 max-w-[240px] truncate">
+                    <span className="text-emerald-400">🔒</span>
+                    <span>https://{project.url}</span>
+                  </div>
+                  <div className="text-slate-500 text-xs font-mono">1080p</div>
+                </div>
+
+                {/* Project Screenshot with Subtle Zoom on Hover */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Floating Glassmorphic Metric Badge */}
+                  <div className="absolute bottom-3 left-3 md:bottom-4 md:left-4 px-3.5 py-1.5 rounded-lg bg-slate-900/90 backdrop-blur-md border border-white/20 text-xs font-medium text-white shadow-xl flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>{project.floatingBadge}</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       {/* Stats Bar */}
       <section id="stats" className="relative z-10 py-20 border-y border-white/5 bg-black/40">
