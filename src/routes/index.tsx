@@ -331,7 +331,7 @@ function Index() {
       <header className="sticky top-0 z-50 w-full backdrop-blur-md border-b border-white/5 bg-black/40">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
-  <img src={logoImg} alt="Yacoub Studio" className="h-8 w-auto object-contain" />
+  <img src={logoImg} alt="Yacoub Studio" className="h-16 w-auto object-contain" />
 </a>
 
 
@@ -731,7 +731,7 @@ function Index() {
                   </div>
                   <div>
                     <div className="text-[11px] font-mono text-white/40">DIRECT INBOX</div>
-                    <div className="font-medium text-white">mena.ashraf@agency.dev</div>
+                    <div className="font-medium text-white">jacobashraf6@gmail.com</div>
                   </div>
                 </div>
 
