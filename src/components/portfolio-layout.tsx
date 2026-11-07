@@ -23,7 +23,7 @@ export function SiteHeader() {
     return <span className={cls}>{name}{["Blog", "Pages"].includes(name) && <ChevronDown className="h-3 w-3" />}</span>;
   };
   return <header className="site-header relative z-30 grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-3 sm:flex sm:justify-between">
-    <Link to="/" className="min-w-0 shrink-0"><img src={logo.url} alt="ITAgency" className="site-logo" /></Link>
+    <Link to="/" className="min-w-0 shrink-0"><img src={logo.url} alt="Yacoub Studio" className="site-logo" /></Link>
     <nav aria-label="Main navigation" className="hidden items-center gap-7 text-base font-medium lg:flex">{navigation.map(n => <div key={n}>{item(n)}</div>)}</nav>
     <div className="flex shrink-0 items-center gap-4">
       <Button asChild className="quote-button hidden sm:inline-flex"><Link to="/contact">Get Quotes</Link></Button>
