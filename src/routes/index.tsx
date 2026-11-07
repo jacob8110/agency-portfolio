@@ -367,10 +367,7 @@ function Index() {
       {/* Hero Section */}
       <main id="hero" className="relative z-10 min-h-[calc(100vh-5rem)] flex items-center justify-center px-6 py-20">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono uppercase tracking-wider mb-8">
-            <Sparkles className="w-3.5 h-3.5" />
-            Next-Gen Digital Solutions
-          </div>
+         
 
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6">
             Technology Solutions <br />
