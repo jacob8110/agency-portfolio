@@ -748,7 +748,7 @@ function Index() {
             </div>
 
             <div className="pt-8 mt-8 border-t border-white/5 text-xs text-white/40 font-mono">
-              Designed & Built by Mena Ashraf © 2026. All rights reserved.
+              Designed & Built by Yacoub Ashraf © 2026. All rights reserved.
             </div>
           </div>
 

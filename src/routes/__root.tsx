@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Yacoub Studio" },
       { name: "description", content: "Yacoub Studio portfolio and selected work" },
-      { name: "author", content: "Mena Ashraf" },
+      { name: "author", content: "Yacoub Ashraf" },
       { property: "og:title", content: "Yacoub Studio" },
       { property: "og:description", content: "Yacoub Studio portfolio and selected work" },
       { property: "og:type", content: "website" },
